@@ -27,7 +27,7 @@ void merge_sort(int *array, size_t size)
  *
  * @left: start of left array
  * @mid: middle index
- * @high: end of right array
+ * @right: end of right array
  * @array: the array to sort
  * @temp: copy array
  *
