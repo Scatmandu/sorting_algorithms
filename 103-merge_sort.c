@@ -1,6 +1,12 @@
 #include "sort.h"
 
-
+/**
+ * merge_sort - gets the array and size to perform mergesort on
+ *
+ * @array: the array to sort
+ * @size: size of the array
+ *
+ */
 void merge_sort(int *array, size_t size)
 {
     size_t i = 0;
@@ -16,7 +22,16 @@ void merge_sort(int *array, size_t size)
     actual_merge(array, temp, 0, size);
     free(temp);
 }
-
+/**
+ * sub_sort - merges sub-matrices
+ *
+ * @left: start of left array
+ * @mid: middle index
+ * @high: end of right array
+ * @array: the array to sort
+ * @temp: copy array
+ *
+ */
 void sub_sort(int *array, int *temp, size_t left, size_t mid, size_t right)
 {
 	size_t i = left, j = mid, k = left;
@@ -46,7 +61,15 @@ void sub_sort(int *array, int *temp, size_t left, size_t mid, size_t right)
 
 	print_array(array + left, right - left);
 }
-
+/**
+ * actual_merge - divides the array until size is 1
+ *
+ * @left: start of left array
+ * @right: end of right array
+ * @array: the array to sort
+ * @temp: copy array
+ *
+ */
 void actual_merge(int *array, int *temp, size_t left, size_t right)
 {
 	size_t mid = 0, i = left;
