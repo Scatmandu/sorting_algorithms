@@ -9,18 +9,18 @@
  */
 void merge_sort(int *array, size_t size)
 {
-    size_t i = 0;
-    int *temp = NULL;
+	size_t i = 0;
+	int *temp = NULL;
 
-    if (array == NULL || size < 2)
-        return;
-    temp = malloc(sizeof(int) * size);
-    if (temp == NULL)
-        return;
-    for (i = 0; i < size; i++)
-        temp[i] = array[i];
-    actual_merge(array, temp, 0, size);
-    free(temp);
+	if (array == NULL || size < 2)
+		return;
+	temp = malloc(sizeof(int) * size);
+	if (temp == NULL)
+		return;
+	for (i = 0; i < size; i++)
+		temp[i] = array[i];
+	actual_merge(array, temp, 0, size);
+	free(temp);
 }
 /**
  * sub_sort - merges sub-matrices
@@ -35,6 +35,7 @@ void merge_sort(int *array, size_t size)
 void sub_sort(int *array, int *temp, size_t left, size_t mid, size_t right)
 {
 	size_t i = left, j = mid, k = left;
+
 	printf("Merging...\n");
 	printf("[left]: ");
 
